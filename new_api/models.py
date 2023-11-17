@@ -15,7 +15,7 @@ class Item(models.Model):
     price=models.IntegerField()
     item_number = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="items")
-    
+    is_active=models.BooleanField(default=False)
     def __str__(self):
      return self.name
  
